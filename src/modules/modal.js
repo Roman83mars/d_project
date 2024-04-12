@@ -4,12 +4,15 @@ export const modal = () => {
     const callbackBtn = document.querySelector('.callback-btn')
     const modalOverlay = document.querySelector('.modal-overlay')
     const body = document.querySelector('body')
+    const modalClose = document.querySelector('.modal-close')
 
     const width = document.documentElement.clientWidth
 
     body.addEventListener('click', (e) => {
 
-        if (e.target.closest('.callback-btn') || e.target.closest('.callback-btn')) {
+        console.dir(e.target);
+
+        if (e.target.closest('.callback-btn')) {
             modal.style.display = 'block'
             modalOverlay.style.display = 'block'
             animate({
@@ -25,7 +28,8 @@ export const modal = () => {
         }
 
     })
-    modal.addEventListener('click', (e) => {
-
+    modalClose.addEventListener('click', (e) => {
+        modal.style.display = 'none'
+        modalOverlay.style.display = 'none'
     })
 }
