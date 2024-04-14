@@ -1099,8 +1099,15 @@ video#video_background {
 	margin-left: 20px;
 }
 
-.services-section .element {
+.services-section .col-sm-6 {	
+	display: none;
+}
+.services-section .col-sm-6, .services-section .col-md-4 {	
+	min-height: 0;
+}
+.services-section .element-active {
 	margin-bottom: 20px;
+	display: block;
 }
 .services-section .element .element-content {
 	padding: 20px;
