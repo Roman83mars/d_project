@@ -21,25 +21,17 @@ export const carousel = () => {
         carouselItems = document.querySelectorAll('.services-carousel .col-sm-6')
         i++
         carouselItems[6].remove()
-        console.log(carouselItems);
     }
 
     const nextCarouselItem = () => {
-        if (i < carouselItems.length) {
-            carouselItems[i].classList.add('element-active')
-            carouselItems[i - 3].classList.remove('element-active')
-            i++
-        } else {
-            i--
-            const cloneCarouselItem = carouselItems[0].cloneNode(true)
-            carouselItems[5].after(cloneCarouselItem)
-            cloneCarouselItem.classList.add('element-active')
-            carouselItems[i - 2].classList.remove('element-active')
-            carouselItems[0].remove()
-            carouselItems = document.querySelectorAll('.services-carousel .col-sm-6')
-            i++
-        }
-        console.log(carouselItems);
+        carouselItems = document.querySelectorAll('.services-carousel .col-sm-6')
+        carouselItems.length === 6
+        carouselItems[i].classList.add('element-active')
+        carouselItems[i - 3].classList.remove('element-active')
+        const cloneCarouselItem = carouselItems[0].cloneNode(true)
+        carouselItems[5].after(cloneCarouselItem)
+        carouselItems[0].remove()
+        carouselItems = document.querySelectorAll('.services-carousel .col-sm-6')
     }
     arrowRight.addEventListener('click', nextCarouselItem)
     arrowLeft.addEventListener('click', prevCarouselItem)
