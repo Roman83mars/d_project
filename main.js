@@ -6,6 +6,7 @@ import { slider } from './src/modules/slider.js';
 import { carousel } from './src/modules/carousel.js';
 import { accordeon } from './src/modules/accordeon.js';
 import { upArrow } from './src/modules/upArrow.js';
+import { validate } from './src/modules/validate.js';
 
 modal()
 smoothScroll()
@@ -13,3 +14,4 @@ slider()
 carousel()
 accordeon()
 upArrow()
+validate()
