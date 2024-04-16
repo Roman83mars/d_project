@@ -5,7 +5,7 @@ export const modal = () => {
     const body = document.querySelector('body')
     const modalClose = document.querySelector('.modal-close')
 
-    const width = document.documentElement.clientWidth
+    let statusBlock = document.querySelector('.statusBlock')
 
     body.addEventListener('click', (e) => {
 
@@ -28,11 +28,23 @@ export const modal = () => {
 
     })
     modalClose.addEventListener('click', (e) => {
+        statusBlock = document.querySelector('.statusBlock')
         modal.style.display = 'none'
         modalOverlay.style.display = 'none'
+        if (statusBlock) {
+            statusBlock.remove()
+        } else {
+            return
+        }
     })
     modalOverlay.addEventListener('click', (e) => {
+        statusBlock = document.querySelector('.statusBlock')
         modal.style.display = 'none'
         modalOverlay.style.display = 'none'
+        if (statusBlock) {
+            statusBlock.remove()
+        } else {
+            return
+        }
     })
 }

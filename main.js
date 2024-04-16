@@ -7,6 +7,7 @@ import { carousel } from './src/modules/carousel.js';
 import { accordeon } from './src/modules/accordeon.js';
 import { upArrow } from './src/modules/upArrow.js';
 import { validate } from './src/modules/validate.js';
+import { sendForm } from './src/modules/sendForm.js';
 
 modal()
 smoothScroll()
@@ -15,3 +16,4 @@ carousel()
 accordeon()
 upArrow()
 validate()
+sendForm()
