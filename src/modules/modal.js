@@ -15,7 +15,7 @@ export const modal = () => {
             modal.style.display = 'block'
             modalOverlay.style.display = 'block'
             animate({
-                duration: 1500,
+                duration: 900,
                 timing(timeFraction) {
                     return timeFraction;
                 },

@@ -7,6 +7,8 @@ export const slider = () => {
     let currentSlide = 0
     let interval
 
+    slides[0].classList.add('item-active')
+
     const addDots = () => {
         sliderBlock.insertAdjacentHTML('beforeend', '<ul class="dots"></ul>')
         const dots = document.querySelector('.dots')
